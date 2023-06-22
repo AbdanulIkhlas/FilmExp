@@ -1,0 +1,225 @@
+/*! CSS RESET  */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*! CSS Index */
+
+body {
+    background-color: rgb(255, 136, 0);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+header {
+
+    width: 100%;
+    height: 5em;
+    background-color: rgb(24, 7, 0);
+    box-sizing: border-box;
+}
+
+/*! start : style logo */
+header section {
+    float: left;
+    border: 1px solid white;
+    width: 4.9em;
+    height: 4.9em;
+}
+
+header section img {
+    width: 4.9em;
+    height: 4.9em;
+}
+
+/** end : style logo  */
+
+
+/*! start : style navbar  */
+header nav {
+    float: right;
+    width: 48em;
+    height: 4.9em;
+    display: inline-block;
+}
+
+header nav ul {
+    border-right: 2px solid white;
+    width: 58.5%;
+    height: 3.3em;
+    float: left;
+    margin-top: 12px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: right;
+}
+
+header nav ul li {
+    display: inline-block;
+    height: 30px;
+    border: 1px solid white;
+    padding: 5px 20px;
+}
+
+header nav section {
+    line-height: 4.9em;
+    float: right;
+    width: 40%;
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    padding-right: 10px;
+    gap: 10px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+.searching {
+    display: inline-block;
+}
+
+.searching input {
+    width: 200px;
+}
+
+.login {
+    display: inline-block;
+    width: 4em;
+    border: 1px solid white;
+}
+
+/** end : style navbar  */
