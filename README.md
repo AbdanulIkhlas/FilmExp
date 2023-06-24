@@ -1,3 +1,3 @@
-# sinopsis-film
+# SINOPSIS FILM
 
 ### Website sinopsis film
