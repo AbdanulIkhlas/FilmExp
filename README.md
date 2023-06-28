@@ -1,3 +1,3 @@
-# SINOPSIS FILM
+# Film Explainer
 
-### Website sinopsis film
+### Website Sinopsis Film, Drama, Series, dan Anime
