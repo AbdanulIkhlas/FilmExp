@@ -1,3 +1,5 @@
 # Film Explainer
 
-### Website Sinopsis Film, Drama, Series, dan Anime
+### Website Sinopsis Film
+
+Coming Soon
