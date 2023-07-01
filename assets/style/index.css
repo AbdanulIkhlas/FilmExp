@@ -140,72 +140,75 @@ body {
 }
 
 header {
-
     width: 100%;
     height: 5em;
     background-color: rgb(24, 7, 0);
     box-sizing: border-box;
+    padding-inline: 3rem;
+    display: flex;
 }
 
 /*! start : style logo */
 header section {
-    float: left;
-    border: 1px solid white;
     width: 4.9em;
     height: 4.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header section img {
-    width: 4.9em;
-    height: 4.9em;
+    width: 4em;
+    height: 4em;
 }
 
 /** end : style logo  */
-
-
+/* ---------------------------------------------------- */
 /*! start : style navbar  */
+
 header nav {
-    float: right;
-    width: 48em;
+    width: 100vw;
     height: 4.9em;
     display: inline-block;
+    display: flex;
+    justify-content: right;
 }
 
 header nav ul {
-    border-right: 2px solid white;
+    border-right: 3px solid white;
     width: 58.5%;
     height: 3.3em;
-    float: left;
     margin-top: 12px;
     line-height: 30px;
     text-align: center;
     font-size: 18px;
-    padding: 10px;
+    padding: 10px 30px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     gap: 40px;
     justify-content: right;
+    align-items: center;
 }
 
 header nav ul li {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     height: 30px;
     border: 1px solid white;
     padding: 5px 20px;
 }
 
+
 header nav section {
     line-height: 4.9em;
-    float: right;
-    width: 40%;
+    width: 20vw;
     display: flex;
     justify-content: right;
     text-align: center;
     padding-right: 10px;
     gap: 10px;
     box-sizing: border-box;
-    border: 1px solid transparent;
 }
 
 .searching {
@@ -213,13 +216,24 @@ header nav section {
 }
 
 .searching input {
-    width: 200px;
+    width: 13vw;
 }
 
 .login {
-    display: inline-block;
-    width: 4em;
-    border: 1px solid white;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.login svg {
+    width: 2rem;
+    height: 2rem;
 }
 
 /** end : style navbar  */
+/* ---------------------------------------------------- */
