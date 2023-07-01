@@ -133,6 +133,37 @@ table {
 
 /*! CSS Index */
 
+/*! start : style scrollbar */
+/*? Untuk WebKit (Chrome, Safari)   */
+
+::-webkit-scrollbar {
+    /*? Ukuran lebar scroll bar */
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    /*? Warna scroll bar */
+    background-color: orange;
+}
+
+/*? Untuk Firefox */
+
+* {
+    /*? Ukuran lebar scroll bar */
+    scrollbar-width: thin;
+    /*? Warna scroll bar */
+    scrollbar-color: orange transparent;
+}
+
+*::-webkit-scrollbar-track {
+    /*? Warna latar belakang track */
+    background-color: transparent;
+}
+
+
+/** end : style scrollbar  */
+
 body {
     background-color: rgb(255, 136, 0);
     color: white;
@@ -174,7 +205,7 @@ header nav {
     justify-content: right;
 }
 
-header nav ul {
+header nav .ul-navbar {
     border-right: 3px solid white;
     width: 58.5%;
     height: 3.3em;
@@ -182,7 +213,7 @@ header nav ul {
     line-height: 30px;
     text-align: center;
     font-size: 18px;
-    padding: 10px 30px;
+    padding: 10px 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -191,12 +222,22 @@ header nav ul {
     align-items: center;
 }
 
-header nav ul li {
+header nav ul .li-navbar {
+    position: relative;
     display: flex;
     justify-content: center;
     height: 30px;
     border: 1px solid white;
-    padding: 5px 20px;
+    border-radius: 5px;
+    padding-block: 5px;
+    gap: 12px;
+    cursor: pointer;
+    width: 8vw;
+}
+
+header nav ul li span {
+    display: flex;
+    align-items: center;
 }
 
 
@@ -206,8 +247,8 @@ header nav section {
     display: flex;
     justify-content: right;
     text-align: center;
-    padding-right: 10px;
-    gap: 10px;
+    padding-inline: 10px;
+    gap: 20px;
     box-sizing: border-box;
 }
 
@@ -233,6 +274,34 @@ header nav section {
 .login svg {
     width: 2rem;
     height: 2rem;
+}
+
+.dropdown {
+    position: absolute;
+    border: 1px solid white;
+    right: 0;
+    top: 43px;
+    width: 8vw;
+    padding-block: 18px;
+    box-sizing: border-box;
+    display: none;
+    gap: 10px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown li a:hover {
+    color: orange;
+}
+
+.li-navbar ul.active {
+    display: flex;
+    flex-direction: column;
 }
 
 /** end : style navbar  */
