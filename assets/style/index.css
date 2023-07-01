@@ -203,36 +203,41 @@ header nav {
     display: inline-block;
     display: flex;
     justify-content: right;
+    align-items: center;
 }
 
 header nav .ul-navbar {
     border-right: 3px solid white;
-    width: 58.5%;
-    height: 3.3em;
-    margin-top: 12px;
+    height: 4rem;
     line-height: 30px;
     text-align: center;
-    font-size: 18px;
-    padding: 10px 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 25px;
     justify-content: right;
     align-items: center;
+    padding-inline: 25px;
 }
 
 header nav ul .li-navbar {
     position: relative;
+    font-size: 16px;
     display: flex;
     justify-content: center;
-    height: 30px;
-    border: 1px solid white;
+    align-items: center;
+    height: 3.2vh;
+    border: 2px solid white;
     border-radius: 5px;
-    padding-block: 5px;
-    gap: 12px;
+    padding: 2px;
+    gap: 5px;
     cursor: pointer;
     width: 8vw;
+}
+
+header nav ul .li-navbar a {
+    text-decoration: none;
+    color: white;
 }
 
 header nav ul li span {
@@ -243,21 +248,47 @@ header nav ul li span {
 
 header nav section {
     line-height: 4.9em;
+    height: 4rem;
     width: 20vw;
     display: flex;
     justify-content: right;
     text-align: center;
-    padding-inline: 10px;
-    gap: 20px;
+    padding-inline: 25px;
+    gap: 25px;
     box-sizing: border-box;
 }
 
 .searching {
-    display: inline-block;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.searching .search-icon {
+    width: 2vw;
+    height: 3.4vh;
+    background-color: rgb(24, 7, 0);
+    border: 2px solid white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .searching input {
-    width: 13vw;
+    width: 10.5vw;
+    height: 3.2vh;
+    background-color: rgb(24, 7, 0);
+    color: white;
+    border: 2px solid white;
+    border-left: 1px solid white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.searching input:focus {
+    outline: none;
 }
 
 .login {
@@ -265,22 +296,17 @@ header nav section {
     align-self: center;
     justify-content: center;
     align-items: center;
-    width: 3rem;
-    height: 3rem;
     border: 3px solid white;
     border-radius: 50%;
-}
-
-.login svg {
-    width: 2rem;
-    height: 2rem;
+    box-sizing: border-box;
+    padding: 5px;
 }
 
 .dropdown {
     position: absolute;
     border: 1px solid white;
     right: 0;
-    top: 43px;
+    top: 32px;
     width: 8vw;
     padding-block: 18px;
     box-sizing: border-box;
@@ -288,6 +314,7 @@ header nav section {
     gap: 10px;
     border-radius: 5px;
     background-color: black;
+
 }
 
 .dropdown li a {
@@ -297,11 +324,13 @@ header nav section {
 
 .dropdown li a:hover {
     color: orange;
+    transition: .25s;
 }
 
 .li-navbar ul.active {
     display: flex;
     flex-direction: column;
+
 }
 
 /** end : style navbar  */
