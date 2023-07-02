@@ -2,4 +2,4 @@
 
 ### Website Sinopsis Film
 
-Coming Soon
+Sebuah web sinopsis film, drama, dan anime
