@@ -92,7 +92,91 @@
             </section>
         </nav>
     </header>
-    <main></main>
+    <main>
+        <article>
+            <!-- Bagian Tren Sekarang -->
+            <section>
+                <h1>TREN SEKARANG</h1>
+                <div class="all-cards">
+                    <div class="container-card">
+                        <div class="card">
+                            <a href="halamanSinopsis.php">
+                                <div class="info">
+                                    <div class="negara">Jepang</div>
+                                    <div class="tahun">2023</div>
+                                </div>
+                                <!-- format :  width: 160px , height: 195px;-->
+                                <img id="gambar" src="assets/image/haikyu.png" alt="">
+                                <div class="genre">Animation, comedy</div>
+                            </a>
+                        </div>
+                        <label for="gambar">Haikyu</label>
+                    </div>
+                    <!-- xxxx adalah yang di isi (di ambil dari database) -->
+                    <div class="container-card">
+                        <div class="card">
+                            <a href="halamanSinopsis.php?id=xxxxx">
+                                <div class="info">
+                                    <div class="negara">xxxx</div>
+                                    <div class="tahun">xxxx</div>
+                                </div>
+                                <img id="gambar" src="xxx" alt="xxx">
+                                <div class="genre">xxxxxx</div>
+                            </a>
+                        </div>
+                        <label for="gambar">xxxx</label>
+                    </div>
+                </div>
+            </section>
+            <!-- end : Bagian Tren Sekarang -->
+
+            <!-- Bagian LAIN (ambil dari database atau static juga boleh)-->
+            <section>
+                <h1>BAGIAN LAIN</h1>
+                <div class="all-cards">
+                    <!-- xxxx adalah yang di isi (di ambil dari database) -->
+                    <div class="container-card">
+                        <div class="card">
+                            <a href="halamanSinopsis.php?id=xxxxx">
+                                <div class="info">
+                                    <div class="negara">xxxx</div>
+                                    <div class="tahun">xxxx</div>
+                                </div>
+                                <!-- format :  width: 160px , height: 195px;-->
+                                <img id="gambar" src="xxx" alt="xxx">
+                                <div class="genre">xxxxxx</div>
+                            </a>
+                        </div>
+                        <label for="gambar">xxxx</label>
+                    </div>
+                </div>
+            </section>
+            <!-- end : Bagian LAIN-->
+
+            <!-- Bagian LAIN2 (ambil dari database atau static juga boleh)-->
+            <section>
+                <h1>BAGIAN LAIN 2</h1>
+                <div class="all-cards">
+                    <!-- xxxx adalah yang di isi (di ambil dari database) -->
+                    <div class="container-card">
+                        <div class="card">
+                            <a href="halamanSinopsis.php?id=xxxxx">
+                                <div class="info">
+                                    <div class="negara">xxxx</div>
+                                    <div class="tahun">xxxx</div>
+                                </div>
+                                <!-- format :  width: 160px , height: 195px;-->
+                                <img id="gambar" src="xxx" alt="xxx">
+                                <div class="genre">xxxxxx</div>
+                            </a>
+                        </div>
+                        <label for="gambar">xxxx</label>
+                    </div>
+                </div>
+            </section>
+            <!-- end : Bagian LAIN2-->
+        </article>
+    </main>
     <footer></footer>
     <script src="assets/script/index.js"></script>
 </body>
