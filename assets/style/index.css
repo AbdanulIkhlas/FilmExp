@@ -144,7 +144,7 @@ table {
 
 ::-webkit-scrollbar-thumb {
     /*? Warna scroll bar */
-    background-color: orange;
+    background-color: #E0FBFC;
 }
 
 /*? Untuk Firefox */
@@ -153,7 +153,7 @@ table {
     /*? Ukuran lebar scroll bar */
     scrollbar-width: thin;
     /*? Warna scroll bar */
-    scrollbar-color: orange transparent;
+    scrollbar-color: #E0FBFC transparent;
 }
 
 *::-webkit-scrollbar-track {
@@ -165,7 +165,7 @@ table {
 /** end : style scrollbar  */
 
 body {
-    background-color: rgb(255, 136, 0);
+    background-color: #293241;
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
@@ -173,7 +173,7 @@ body {
 header {
     width: 100%;
     height: 5em;
-    background-color: rgb(24, 7, 0);
+    background-color: #000;
     box-sizing: border-box;
     padding-inline: 3rem;
     display: flex;
@@ -258,33 +258,35 @@ header nav section {
     box-sizing: border-box;
 }
 
+header nav section a {
+    text-decoration: none;
+    color: white;
+}
+
 .searching {
     display: flex;
     box-sizing: border-box;
+    height: 4vh;
+    width: 13vw;
 }
 
 .searching .search-icon {
-    width: 2vw;
-    height: 3.4vh;
-    background-color: rgb(24, 7, 0);
-    border: 2px solid white;
+    background-color: black;
+    border: 1px solid white;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .searching input {
-    width: 10.5vw;
-    height: 3.2vh;
-    background-color: rgb(24, 7, 0);
+    width: 100%;
     color: white;
-    border: 2px solid white;
-    border-left: 1px solid white;
+    background-color: black;
+    font-size: 12pt;
+    border: 1px solid white;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-
 }
 
 .searching input:focus {
