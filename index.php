@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include 'koneksi.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,13 +32,17 @@
                         </svg>
                     </span>
                     <ul class="dropdown">
-                        <li><a href="">Action</a></li>
-                        <li><a href="">Romance</a></li>
-                        <li><a href="">Comedy</a></li>
-                        <li><a href="">Horror</a></li>
-                        <li><a href="">Sci-Fi</a></li>
-                        <li><a href="">Animation</a></li>
+                        <!-- ikhsan : database genre -->
+                        <?php
+                            $query = mysqli_query($conn, "SELECT * FROM navbar_genre");
+                            while($data = mysqli_fetch_array($query)){
+                        ?>
+                            <li><a href=""> <?php echo $data['genre']; ?> </a></li>
+                            
+                        <?php } ?>
                     </ul>
+
+                
                 </li>
                 <li class="li-navbar">
                     NEGARA
@@ -45,10 +54,14 @@
                         </svg>
                     </span>
                     <ul class="dropdown">
-                        <li><a href="">Amerika</a></li>
-                        <li><a href="">Indonesia</a></li>
-                        <li><a href="">Jepang</a></li>
-                        <li><a href="">Korea</a></li>
+                        <!-- ikhsan : database negara -->
+                        <?php
+                            $query = mysqli_query($conn, "SELECT * FROM navbar_negara");
+                            while($data = mysqli_fetch_array($query)){
+                        ?>
+                            <li><a href=""> <?php echo $data['negara']; ?> </a></li>
+                            
+                        <?php } ?>
                     </ul>
                 </li>
                 <li class="li-navbar">
@@ -61,26 +74,33 @@
                         </svg>
                     </span>
                     <ul class="dropdown">
-                        <li><a href="">2020</a></li>
-                        <li><a href="">2021</a></li>
-                        <li><a href="">2022</a></li>
-                        <li><a href="">2023</a></li>
+                        <!-- ikhsan : database tahun -->
+                        <?php
+                            $query = mysqli_query($conn, "SELECT * FROM navbar_tahun");
+                            while($data = mysqli_fetch_array($query)){
+                        ?>
+                            <li><a href=""> <?php echo $data['tahun']; ?> </a></li>
+                            
+                        <?php } ?>
                     </ul>
                 </li>
             </ul>
             <section>
-                <form action="#">
+
+                <!-- ikhsan : searching by judul -->
+                <form action="searching.php" method="POST">
                     <div class="searching">
-                        <button class="search-icon" type="submit">
+                        <button class="search-icon" type="submit" name="cari">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
                                 class="bi bi-search" viewBox="0 0 16 16">
                                 <path
                                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                             </svg>
                         </button>
-                        <input type="text" placeholder="Search">
+                        <input type="text" placeholder="Search" name="cari_judul">
                     </div>
-                </form>
+                </form>  
+
                 <a href="halamanLogin.php">
                     <div class="login">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -98,34 +118,29 @@
             <section>
                 <h1>TREN SEKARANG</h1>
                 <div class="all-cards">
+                    
+                    <!-- ikhsan : database konten -->
+                    <?php
+                        $query = mysqli_query($conn, "SELECT * FROM konten");
+                        while($data = mysqli_fetch_array($query)){
+                    ?>
+
                     <div class="container-card">
                         <div class="card">
-                            <a href="halamanSinopsis.php">
+                            <a href=halamanSinopsis.php?id=<?php echo $data['id']; ?>>
                                 <div class="info">
-                                    <div class="negara">Jepang</div>
-                                    <div class="tahun">2023</div>
+                                    <div class="negara"> <?php echo $data['negara'] ?> </div>
+                                    <div class="tahun"> <?php echo $data['tahun'] ?> </div>
                                 </div>
-                                <!-- format :  width: 160px , height: 195px;-->
-                                <img id="gambar" src="assets/image/haikyu.png" alt="">
-                                <div class="genre">Animation, comedy</div>
+                                <img id="gambar" src="<?php echo "assets/image/".$data['gambar']; ?>"" alt="">
+                                <div class="genre"> <?php echo $data['genre'] ?> </div>
                             </a>
                         </div>
-                        <label for="gambar">Haikyu</label>
+                        <label for="gambar"> <?php echo $data['judul'] ?> </label>
                     </div>
-                    <!-- xxxx adalah yang di isi (di ambil dari database) -->
-                    <div class="container-card">
-                        <div class="card">
-                            <a href="halamanSinopsis.php?id=xxxxx">
-                                <div class="info">
-                                    <div class="negara">xxxx</div>
-                                    <div class="tahun">xxxx</div>
-                                </div>
-                                <img id="gambar" src="xxx" alt="xxx">
-                                <div class="genre">xxxxxx</div>
-                            </a>
-                        </div>
-                        <label for="gambar">xxxx</label>
-                    </div>
+
+                    <?php } ?>
+
                 </div>
             </section>
             <!-- end : Bagian Tren Sekarang -->
