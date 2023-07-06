@@ -37,12 +37,12 @@
                             $query = mysqli_query($conn, "SELECT * FROM navbar_genre");
                             while($data = mysqli_fetch_array($query)){
                         ?>
-                            <li><a href=""> <?php echo $data['genre']; ?> </a></li>
-                            
+                        <li><a href=""> <?php echo $data['genre']; ?> </a></li>
+
                         <?php } ?>
                     </ul>
 
-                
+
                 </li>
                 <li class="li-navbar">
                     NEGARA
@@ -59,8 +59,8 @@
                             $query = mysqli_query($conn, "SELECT * FROM navbar_negara");
                             while($data = mysqli_fetch_array($query)){
                         ?>
-                            <li><a href=""> <?php echo $data['negara']; ?> </a></li>
-                            
+                        <li><a href=""> <?php echo $data['negara']; ?> </a></li>
+
                         <?php } ?>
                     </ul>
                 </li>
@@ -79,8 +79,8 @@
                             $query = mysqli_query($conn, "SELECT * FROM navbar_tahun");
                             while($data = mysqli_fetch_array($query)){
                         ?>
-                            <li><a href=""> <?php echo $data['tahun']; ?> </a></li>
-                            
+                        <li><a href=""> <?php echo $data['tahun']; ?> </a></li>
+
                         <?php } ?>
                     </ul>
                 </li>
@@ -99,7 +99,7 @@
                         </button>
                         <input type="text" placeholder="Search" name="cari_judul">
                     </div>
-                </form>  
+                </form>
 
                 <a href="halamanLogin.php">
                     <div class="login">
@@ -118,7 +118,7 @@
             <section>
                 <h1>TREN SEKARANG</h1>
                 <div class="all-cards">
-                    
+
                     <!-- ikhsan : database konten -->
                     <?php
                         $query = mysqli_query($conn, "SELECT * FROM konten");
@@ -133,13 +133,13 @@
                                     <div class="tahun"> <?php echo $data['tahun'] ?> </div>
                                 </div>
                                 <img id="gambar" src="<?php echo "assets/image/".$data['gambar']; ?>"" alt="">
-                                <div class="genre"> <?php echo $data['genre'] ?> </div>
-                            </a>
-                        </div>
-                        <label for="gambar"> <?php echo $data['judul'] ?> </label>
+                                <div class=" genre"> <?php echo $data['genre'] ?> </div>
+                        </a>
                     </div>
+                    <label for="gambar"> <?php echo $data['judul'] ?> </label>
+                </div>
 
-                    <?php } ?>
+                <?php } ?>
 
                 </div>
             </section>

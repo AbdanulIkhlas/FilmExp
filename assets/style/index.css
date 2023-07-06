@@ -316,6 +316,7 @@ header nav section a {
     gap: 10px;
     border-radius: 5px;
     background-color: black;
+    z-index: 999;
 
 }
 
