@@ -147,7 +147,7 @@
 
             <!-- Bagian LAIN (ambil dari database atau static juga boleh)-->
             <section>
-                <h1>BAGIAN LAIN</h1>
+                <h1>COMING SOON</h1>
                 <div class="all-cards">
                     <!-- xxxx adalah yang di isi (di ambil dari database) -->
                     <div class="container-card">
@@ -170,7 +170,7 @@
 
             <!-- Bagian LAIN2 (ambil dari database atau static juga boleh)-->
             <section>
-                <h1>BAGIAN LAIN 2</h1>
+                <h1>FILM EXPLAINER REKOMENDASI</h1>
                 <div class="all-cards">
                     <!-- xxxx adalah yang di isi (di ambil dari database) -->
                     <div class="container-card">
