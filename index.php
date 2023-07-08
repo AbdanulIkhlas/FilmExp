@@ -17,7 +17,7 @@
 <body>
     <header>
         <section>
-            <img src="assets/image/logo.png" alt="Logo">
+            <img src="assets/image/logo.jpg" alt="Logo">
         </section>
         <nav>
             <ul class="ul-navbar">
@@ -134,12 +134,12 @@
                                 </div>
                                 <img id="gambar" src="<?php echo "assets/image/".$data['gambar']; ?>" alt="">
                                 <div class=" genre"> <?php echo $data['genre'] ?> </div>
-                        </a>
+                            </a>
+                        </div>
+                        <label for="gambar"> <?php echo $data['judul'] ?> </label>
                     </div>
-                    <label for="gambar"> <?php echo $data['judul'] ?> </label>
-                </div>
 
-                <?php } ?>
+                    <?php } ?>
 
                 </div>
             </section>
@@ -180,7 +180,7 @@
                 <h1>FILM EXPLAINER REKOMENDASI</h1>
                 <div class="all-cards">
                     <!-- xxxx adalah yang di isi (di ambil dari database) -->
-                    
+
                     <?php
                         $query = mysqli_query($conn, "SELECT * FROM konten WHERE kategori=3");
                         while($data = mysqli_fetch_array($query)){
@@ -200,7 +200,7 @@
                         </div>
                         <label for="gambar"><?php echo $data['judul'] ?></label>
                     </div>
-                    
+
                     <?php } ?>
 
                 </div>

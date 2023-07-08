@@ -181,15 +181,12 @@ header {
 
 /*! start : style logo */
 header section {
-    width: 4.9em;
-    height: 4.9em;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 header section img {
-    width: 4em;
     height: 4em;
 }
 
