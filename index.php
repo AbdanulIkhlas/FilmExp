@@ -121,7 +121,7 @@
 
                     <!-- ikhsan : database konten -->
                     <?php
-                        $query = mysqli_query($conn, "SELECT * FROM konten");
+                        $query = mysqli_query($conn, "SELECT * FROM konten WHERE kategori=1");
                         while($data = mysqli_fetch_array($query)){
                     ?>
 
@@ -132,7 +132,7 @@
                                     <div class="negara"> <?php echo $data['negara'] ?> </div>
                                     <div class="tahun"> <?php echo $data['tahun'] ?> </div>
                                 </div>
-                                <img id="gambar" src="<?php echo "assets/image/".$data['gambar']; ?>"" alt="">
+                                <img id="gambar" src="<?php echo "assets/image/".$data['gambar']; ?>" alt="">
                                 <div class=" genre"> <?php echo $data['genre'] ?> </div>
                         </a>
                     </div>
@@ -147,46 +147,62 @@
 
             <!-- Bagian LAIN (ambil dari database atau static juga boleh)-->
             <section>
-                <h1>BAGIAN LAIN</h1>
+                <h1>COMING SOON</h1>
                 <div class="all-cards">
                     <!-- xxxx adalah yang di isi (di ambil dari database) -->
+
+                    <?php
+                        $query = mysqli_query($conn, "SELECT * FROM konten WHERE kategori=2");
+                        while($data = mysqli_fetch_array($query)){
+                    ?>
+
                     <div class="container-card">
                         <div class="card">
-                            <a href="halamanSinopsis.php?id=xxxxx">
+                            <a href=halamanSinopsis.php?id=<?php echo $data['id']; ?>>
                                 <div class="info">
-                                    <div class="negara">xxxx</div>
-                                    <div class="tahun">xxxx</div>
+                                    <div class="negara"> <?php echo $data['negara'] ?> </div>
+                                    <div class="tahun"> <?php echo $data['tahun'] ?> </div>
                                 </div>
                                 <!-- format :  width: 160px , height: 195px;-->
-                                <img id="gambar" src="xxx" alt="xxx">
-                                <div class="genre">xxxxxx</div>
+                                <img id="gambar" src="<?php echo "assets/image/".$data['gambar']; ?>" alt="xxx">
+                                <div class="genre"><?php echo $data['genre'] ?></div>
                             </a>
                         </div>
-                        <label for="gambar">xxxx</label>
+                        <label for="gambar"> <?php echo $data['judul'] ?> </label>
                     </div>
+                    <?php } ?>
                 </div>
             </section>
             <!-- end : Bagian LAIN-->
 
             <!-- Bagian LAIN2 (ambil dari database atau static juga boleh)-->
             <section>
-                <h1>BAGIAN LAIN 2</h1>
+                <h1>FILM EXPLAINER REKOMENDASI</h1>
                 <div class="all-cards">
                     <!-- xxxx adalah yang di isi (di ambil dari database) -->
+                    
+                    <?php
+                        $query = mysqli_query($conn, "SELECT * FROM konten WHERE kategori=3");
+                        while($data = mysqli_fetch_array($query)){
+                    ?>
+
                     <div class="container-card">
                         <div class="card">
-                            <a href="halamanSinopsis.php?id=xxxxx">
+                            <a href=halamanSinopsis.php?id=<?php echo $data['id']; ?>>
                                 <div class="info">
-                                    <div class="negara">xxxx</div>
-                                    <div class="tahun">xxxx</div>
+                                    <div class="negara"><?php echo $data['negara'] ?></div>
+                                    <div class="tahun"><?php echo $data['tahun'] ?></div>
                                 </div>
                                 <!-- format :  width: 160px , height: 195px;-->
-                                <img id="gambar" src="xxx" alt="xxx">
-                                <div class="genre">xxxxxx</div>
+                                <img id="gambar" src="<?php echo "assets/image/".$data['gambar']; ?>" alt="xxx">
+                                <div class="genre"><?php echo $data['genre'] ?></div>
                             </a>
                         </div>
-                        <label for="gambar">xxxx</label>
+                        <label for="gambar"><?php echo $data['judul'] ?></label>
                     </div>
+                    
+                    <?php } ?>
+
                 </div>
             </section>
             <!-- end : Bagian LAIN2-->
