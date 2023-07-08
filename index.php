@@ -38,11 +38,8 @@
                             while($data = mysqli_fetch_array($query)){
                         ?>
                         <li><a href=""> <?php echo $data['genre']; ?> </a></li>
-
                         <?php } ?>
                     </ul>
-
-
                 </li>
                 <li class="li-navbar">
                     NEGARA
@@ -60,7 +57,6 @@
                             while($data = mysqli_fetch_array($query)){
                         ?>
                         <li><a href=""> <?php echo $data['negara']; ?> </a></li>
-
                         <?php } ?>
                     </ul>
                 </li>
@@ -80,13 +76,11 @@
                             while($data = mysqli_fetch_array($query)){
                         ?>
                         <li><a href=""> <?php echo $data['tahun']; ?> </a></li>
-
                         <?php } ?>
                     </ul>
                 </li>
             </ul>
             <section>
-
                 <!-- ikhsan : searching by judul -->
                 <form action="searching.php" method="POST">
                     <div class="searching">
@@ -100,7 +94,6 @@
                         <input type="text" placeholder="Search" name="cari_judul">
                     </div>
                 </form>
-
                 <a href="halamanLogin.php">
                     <div class="login">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -118,13 +111,11 @@
             <section>
                 <h1>TREN SEKARANG</h1>
                 <div class="all-cards">
-
                     <!-- ikhsan : database konten -->
                     <?php
                         $query = mysqli_query($conn, "SELECT * FROM konten WHERE kategori=1");
                         while($data = mysqli_fetch_array($query)){
                     ?>
-
                     <div class="container-card">
                         <div class="card">
                             <a href=halamanSinopsis.php?id=<?php echo $data['id']; ?>>
@@ -138,24 +129,19 @@
                         </div>
                         <label for="gambar"> <?php echo $data['judul'] ?> </label>
                     </div>
-
                     <?php } ?>
-
                 </div>
             </section>
             <!-- end : Bagian Tren Sekarang -->
 
-            <!-- Bagian LAIN (ambil dari database atau static juga boleh)-->
+            <!-- start : coming soon-->
             <section>
                 <h1>COMING SOON</h1>
                 <div class="all-cards">
-                    <!-- xxxx adalah yang di isi (di ambil dari database) -->
-
                     <?php
                         $query = mysqli_query($conn, "SELECT * FROM konten WHERE kategori=2");
                         while($data = mysqli_fetch_array($query)){
                     ?>
-
                     <div class="container-card">
                         <div class="card">
                             <a href=halamanSinopsis.php?id=<?php echo $data['id']; ?>>
@@ -175,17 +161,14 @@
             </section>
             <!-- end : Bagian LAIN-->
 
-            <!-- Bagian LAIN2 (ambil dari database atau static juga boleh)-->
+            <!-- start : rekomendasi-->
             <section>
                 <h1>FILM EXPLAINER REKOMENDASI</h1>
                 <div class="all-cards">
-                    <!-- xxxx adalah yang di isi (di ambil dari database) -->
-
                     <?php
                         $query = mysqli_query($conn, "SELECT * FROM konten WHERE kategori=3");
                         while($data = mysqli_fetch_array($query)){
                     ?>
-
                     <div class="container-card">
                         <div class="card">
                             <a href=halamanSinopsis.php?id=<?php echo $data['id']; ?>>
@@ -200,12 +183,10 @@
                         </div>
                         <label for="gambar"><?php echo $data['judul'] ?></label>
                     </div>
-
                     <?php } ?>
-
                 </div>
             </section>
-            <!-- end : Bagian LAIN2-->
+            <!-- end : rekomendasi-->
         </article>
     </main>
     <footer></footer>
