@@ -129,7 +129,8 @@
                                 <div class=" genre"> <?php echo $data['genre'] ?> </div>
                             </a>
                         </div>
-                        <label for="gambar"> <?php echo $data['judul'] ?> </label>
+                        <label for="gambar" id="judul"> <?php echo $data['judul'] ?> </label>
+                        <div id="tooltip"> <?php echo $data['judul'] ?> </div>
                     </div>
                     <?php } ?>
                 </div>
@@ -156,7 +157,8 @@
                                 <div class="genre"><?php echo $data['genre'] ?></div>
                             </a>
                         </div>
-                        <label for="gambar"> <?php echo $data['judul'] ?> </label>
+                        <label for="gambar" id="judul"> <?php echo $data['judul'] ?> </label>
+                        <div id="tooltip"> <?php echo $data['judul'] ?> </div>
                     </div>
                     <?php } ?>
                 </div>
@@ -183,7 +185,8 @@
                                 <div class="genre"><?php echo $data['genre'] ?></div>
                             </a>
                         </div>
-                        <label for="gambar"><?php echo $data['judul'] ?></label>
+                        <label for="gambar" id="judul"><?php echo $data['judul'] ?></label>
+                        <div id="tooltip"> <?php echo $data['judul'] ?> </div>
                     </div>
                     <?php } ?>
                 </div>
