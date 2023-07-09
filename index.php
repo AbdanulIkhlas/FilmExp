@@ -189,7 +189,9 @@
             <!-- end : rekomendasi-->
         </article>
     </main>
-    <footer></footer>
+    <footer>
+        &copy; 2023 Film Explainer
+    </footer>
     <script src="assets/script/index.js"></script>
 </body>
 
