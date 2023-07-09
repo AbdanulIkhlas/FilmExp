@@ -17,7 +17,9 @@
 <body>
     <header>
         <section>
-            <img src="assets/image/logo.jpg" alt="Logo">
+            <a href="index.php">
+                <img src="assets/image/logo.jpg" alt="Logo">
+            </a>
         </section>
         <nav>
             <ul class="ul-navbar">
@@ -127,7 +129,8 @@
                                 <div class=" genre"> <?php echo $data['genre'] ?> </div>
                             </a>
                         </div>
-                        <label for="gambar"> <?php echo $data['judul'] ?> </label>
+                        <label for="gambar" id="judul"> <?php echo $data['judul'] ?> </label>
+                        <div id="tooltip"> <?php echo $data['judul'] ?> </div>
                     </div>
                     <?php } ?>
                 </div>
@@ -154,7 +157,8 @@
                                 <div class="genre"><?php echo $data['genre'] ?></div>
                             </a>
                         </div>
-                        <label for="gambar"> <?php echo $data['judul'] ?> </label>
+                        <label for="gambar" id="judul"> <?php echo $data['judul'] ?> </label>
+                        <div id="tooltip"> <?php echo $data['judul'] ?> </div>
                     </div>
                     <?php } ?>
                 </div>
@@ -181,7 +185,8 @@
                                 <div class="genre"><?php echo $data['genre'] ?></div>
                             </a>
                         </div>
-                        <label for="gambar"><?php echo $data['judul'] ?></label>
+                        <label for="gambar" id="judul"><?php echo $data['judul'] ?></label>
+                        <div id="tooltip"> <?php echo $data['judul'] ?> </div>
                     </div>
                     <?php } ?>
                 </div>
@@ -189,7 +194,9 @@
             <!-- end : rekomendasi-->
         </article>
     </main>
-    <footer></footer>
+    <footer>
+        &copy; 2023 Film Explainer
+    </footer>
     <script src="assets/script/index.js"></script>
 </body>
 
