@@ -17,7 +17,9 @@
 <body>
     <header>
         <section>
-            <img src="assets/image/logo.jpg" alt="Logo">
+            <a href="index.php">
+                <img src="assets/image/logo.jpg" alt="Logo">
+            </a>
         </section>
         <nav>
             <ul class="ul-navbar">
