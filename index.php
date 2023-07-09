@@ -123,7 +123,7 @@
                                     <div class="negara"> <?php echo $data['negara'] ?> </div>
                                     <div class="tahun"> <?php echo $data['tahun'] ?> </div>
                                 </div>
-                                <img id="gambar" src="<?php echo "assets/image/".$data['gambar']; ?>" alt="">
+                                <img id="gambar" src="assets/image/film/<?php echo $data['gambar']; ?>" alt="">
                                 <div class=" genre"> <?php echo $data['genre'] ?> </div>
                             </a>
                         </div>
@@ -150,7 +150,7 @@
                                     <div class="tahun"> <?php echo $data['tahun'] ?> </div>
                                 </div>
                                 <!-- format :  width: 160px , height: 195px;-->
-                                <img id="gambar" src="<?php echo "assets/image/".$data['gambar']; ?>" alt="xxx">
+                                <img id="gambar" src="assets/image/film/<?php echo $data['gambar']; ?>" alt="xxx">
                                 <div class="genre"><?php echo $data['genre'] ?></div>
                             </a>
                         </div>
@@ -177,7 +177,7 @@
                                     <div class="tahun"><?php echo $data['tahun'] ?></div>
                                 </div>
                                 <!-- format :  width: 160px , height: 195px;-->
-                                <img id="gambar" src="<?php echo "assets/image/".$data['gambar']; ?>" alt="xxx">
+                                <img id="gambar" src="assets/image/film/<?php echo $data['gambar']; ?>" alt="xxx">
                                 <div class="genre"><?php echo $data['genre'] ?></div>
                             </a>
                         </div>
