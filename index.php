@@ -39,7 +39,11 @@
                             $query = mysqli_query($conn, "SELECT * FROM navbar_genre");
                             while($data = mysqli_fetch_array($query)){
                         ?>
-                        <li><a href=""> <?php echo $data['genre']; ?> </a></li>
+                        <!-- kode 1 : untuk genre  -->
+                        <li>
+                            <a href="filtering.php?kode=1&data=<?php echo $data['genre']; ?>">
+                                <?php echo $data['genre']; ?> </a>
+                        </li>
                         <?php } ?>
                     </ul>
                 </li>
@@ -58,7 +62,11 @@
                             $query = mysqli_query($conn, "SELECT * FROM navbar_negara");
                             while($data = mysqli_fetch_array($query)){
                         ?>
-                        <li><a href=""> <?php echo $data['negara']; ?> </a></li>
+                        <!-- kode 2 : untuk negara  -->
+                        <li>
+                            <a href="filtering.php?kode=1&data=<?php echo $data['negara']; ?>">
+                                <?php echo $data['negara']; ?> </a>
+                        </li>
                         <?php } ?>
                     </ul>
                 </li>
@@ -77,7 +85,11 @@
                             $query = mysqli_query($conn, "SELECT * FROM navbar_tahun");
                             while($data = mysqli_fetch_array($query)){
                         ?>
-                        <li><a href=""> <?php echo $data['tahun']; ?> </a></li>
+                        <!-- kode 3 : untuk tahun  -->
+                        <li>
+                            <a href="filtering.php?kode=3&data=<?php echo $data['tahun']; ?>">
+                                <?php echo $data['tahun']; ?> </a>
+                        </li>
                         <?php } ?>
                     </ul>
                 </li>

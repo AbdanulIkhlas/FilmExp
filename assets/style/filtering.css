@@ -1,0 +1,594 @@
+/*! CSS RESET  */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*! CSS Halaman Filtering */
+
+/*! start : style scrollbar */
+/*? Untuk WebKit (Chrome, Safari)   */
+
+::-webkit-scrollbar {
+    /*? Ukuran lebar scroll bar */
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    /*? Warna scroll bar */
+    background-color: #E0FBFC;
+}
+
+/*? Untuk Firefox */
+
+* {
+    /*? Ukuran lebar scroll bar */
+    scrollbar-width: thin;
+    /*? Warna scroll bar */
+    scrollbar-color: #E0FBFC transparent;
+}
+
+*::-webkit-scrollbar-track {
+    /*? Warna latar belakang track */
+    background-color: transparent;
+}
+
+
+/** end : style scrollbar  */
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #293241;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+header {
+    width: 100%;
+    height: 5em;
+    background-color: #000;
+    box-sizing: border-box;
+    padding-inline: 3rem;
+    display: flex;
+}
+
+/*! start : style logo */
+header section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header section img {
+    height: 4em;
+}
+
+/** end : style logo  */
+/* ---------------------------------------------------- */
+/*! start : style navbar  */
+
+header nav {
+    width: 100vw;
+    height: 4.9em;
+    display: inline-block;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+header nav .ul-navbar {
+    border-right: 3px solid white;
+    height: 4rem;
+    line-height: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: right;
+    align-items: center;
+    padding-inline: 25px;
+}
+
+header nav ul .li-navbar {
+    position: relative;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.2vh;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 2px;
+    gap: 5px;
+    cursor: pointer;
+    width: 8vw;
+}
+
+header nav ul .li-navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav ul li span {
+    display: flex;
+    align-items: center;
+}
+
+
+header nav section {
+    line-height: 4.9em;
+    height: 4rem;
+    width: 20vw;
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    padding-inline: 25px;
+    gap: 25px;
+    box-sizing: border-box;
+}
+
+header nav section a {
+    text-decoration: none;
+    color: white;
+}
+
+.searching {
+    display: flex;
+    box-sizing: border-box;
+    height: 4vh;
+    width: 13vw;
+}
+
+.searching .search-icon {
+    background-color: black;
+    border: 1px solid white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.searching input {
+    width: 100%;
+    color: white;
+    background-color: black;
+    font-size: 12pt;
+    border: 1px solid white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.searching input:focus {
+    outline: none;
+}
+
+.login {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.dropdown {
+    position: absolute;
+    border: 1px solid white;
+    right: 0;
+    top: 32px;
+    width: 8vw;
+    padding-block: 18px;
+    box-sizing: border-box;
+    display: none;
+    gap: 10px;
+    border-radius: 5px;
+    background-color: black;
+    z-index: 999;
+
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown li:hover {
+    background-color: #717a7b;
+    border-radius: 4px;
+    transition: .25s;
+}
+
+.li-navbar .down-icon.rotate-icon {
+    transform: rotate(180deg);
+    transition: transform .2s ease-in-out;
+}
+
+.li-navbar .down-icon {
+    transition: transform .2s ease-in-out;
+}
+
+.li-navbar ul.active {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/** end : style navbar  */
+/* ---------------------------------------------------- */
+/*! start : style main  */
+
+main article {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3rem;
+}
+
+
+main article section {
+    border: 3px solid white;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #364152;
+    box-shadow: 0 0 20px 1px black;
+    margin-bottom: 50px;
+}
+
+main article section h1 {
+    padding: 8px;
+    border-bottom: 3px solid white;
+    font-weight: 600;
+}
+
+
+/*? style scrollbar main content  */
+
+/*?  Untuk WebKit (Chrome, Safari)   */
+::-webkit-scrollbar {
+    /*? Ukuran lebar scroll bar */
+    width: 4.5px;
+    height: 4.5px;
+}
+
+::-webkit-scrollbar-thumb {
+    /*? Warna scroll bar */
+    background-color: #717a7b;
+
+}
+
+/*? Untuk Firefox */
+* {
+    /*? Ukuran lebar scroll bar */
+    scrollbar-width: thin;
+    /*? Warna scroll bar */
+    scrollbar-color: #E0FBFC transparent;
+}
+
+*::-webkit-scrollbar-track {
+    /*? Warna latar belakang track */
+    background-color: transparent;
+}
+
+.all-cards {
+    display: flex;
+    /*? Mengatur wrap saat item lebih dari satu baris */
+    flex-wrap: wrap;
+    /*? Menghapus tinggi tetap untuk mengizinkan wrap */
+    height: auto;
+    margin: 8px;
+    box-sizing: border-box;
+    gap: 50px;
+    padding: 20px 20px 50px 20px;
+}
+
+.all-cards .container-card {
+    position: relative;
+    width: 320px;
+    height: 190px;
+    border: 3px solid white;
+    border-radius: 8px;
+    /*? Mengatur lebar kartu */
+    flex: 0 0 10vw;
+    /*? Mengatur jarak antar kartu */
+    /* margin-right: 30px;
+    margin-bottom: 50px; */
+    box-shadow: 2px 2px 10px 1px black;
+    box-sizing: border-box;
+}
+
+.all-cards .container-card a {
+    text-decoration: none;
+    color: white;
+}
+
+.all-cards .container-card label {
+    position: absolute;
+    overflow: hidden;
+    text-align: left;
+    width: 140px;
+    height: 1.3rem;
+    z-index: 10;
+    bottom: -35px;
+    left: 5px;
+    font-size: 12pt;
+    font-weight: 500;
+    /*? untuk mencegah pemisahan konten menjadi baris baru. */
+    white-space: nowrap;
+}
+
+.all-cards .container-card #tooltip {
+    position: absolute;
+    bottom: -10px;
+    z-index: 20;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    /*? untuk mencegah pemisahan konten menjadi baris baru. */
+    white-space: nowrap;
+}
+
+.all-cards .container-card label#judul:hover+#tooltip {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.all-cards .container-card .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.all-cards .container-card .card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: .3s ease;
+    border-radius: 8px;
+}
+
+.container-card .card .info::before {
+    content: "";
+    height: 20px;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    /*? membuat content ini naik ke atas  */
+    transform: translateY(-50px);
+    transition: .3s ease;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), black);
+}
+
+.container-card .card .info {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 3px;
+    font-size: 10pt;
+    transform: translateY(-50px);
+    transition: .3s ease;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid white;
+}
+
+.container-card .card .info .negara {
+    flex: 1;
+    font-weight: bold;
+}
+
+.container-card .card .info .tahun {
+    flex: 1;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+
+}
+
+.container-card .card .genre::after {
+    content: "";
+    height: 100px;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    /*? membuat content ini turun  */
+    transform: translateY(50px);
+    transition: .3s ease;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
+}
+
+.container-card .card .genre {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 3px;
+    font-size: 10pt;
+    transform: translateY(50px);
+    transition: .3s ease;
+}
+
+.container-card .card a:hover img {
+    transform: scale(1.15);
+}
+
+.container-card .card:hover .info,
+.container-card .card:hover .info::before,
+.container-card .card:hover .genre,
+.container-card .card:hover .genre::after {
+    /*? saat di hover, semua kembali ke posisi semula  */
+    transform: translateY(0);
+}
+
+/** end : style navbar  */
+/* ---------------------------------------------------- */
+/*! start : style footer */
+
+footer {
+    width: 100%;
+    height: 4rem;
+    background-color: #18191a;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 16pt;
+    color: white;
+}
+
+/*! untuk membuat footer tetap di bawah main  */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/** end : style navbar  */
+/* ---------------------------------------------------- */

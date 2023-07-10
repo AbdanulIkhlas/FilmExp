@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film Explainer</title>
-    <link rel="stylesheet" href="assets/style/searching.css">
+    <link rel="stylesheet" href="assets/style/filtering.css">
 </head>
 
 <body>
@@ -123,13 +123,14 @@
     </header>
     <main>
         <article>
-            <!-- hasil searching-->
+            <!-- hasil filtering berdasarkan kode -->
+            <aside>
+
+            </aside>
             <section>
                 <h1>HASIL PENCARIAN</h1>
                 <div class="all-cards">
                     <?php
-
-                        $cari = $_POST['cari_judul'];
                         $query = mysqli_query($conn, "SELECT * FROM konten WHERE CONCAT_WS(' ', judul, genre, negara, tahun) LIKE '%" .$cari. "%'");
                         while($data = mysqli_fetch_array($query)){
                     ?>
