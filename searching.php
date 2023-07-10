@@ -2,16 +2,7 @@
     session_start();
     include 'koneksi.php';
 
-    $cari = $_POST['cari_judul'];
-    $query = mysqli_query($conn, "SELECT * FROM konten WHERE judul LIKE '%" .$cari. "%'");
-    $data = mysqli_fetch_array($query);
-    // if($data > 0){
-    //     $_SESSION['cek'] = true;
-    //     $_SESSION['judul'] = $data['judul'];
-    //     header("location:halamanSinopsis.php");
-    // }else{
-    //     header("location:index.php");
-    // }
+    
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +25,7 @@
         </section>
         <nav>
             <ul class="ul-navbar">
-                <li class="li-navbar"><a href="index.html">HOME</a></li>
+                <li class="li-navbar"><a href="index.php">HOME</a></li>
                 <li class="li-navbar">
                     GENRE
                     <span>
@@ -122,10 +113,12 @@
         <article>
             <!-- hasil searching-->
             <section>
-                <h1>TREN SEKARANG</h1>
+                <h1>HASIL PENCARIAN</h1>
                 <div class="all-cards">
                     <?php
-                        $query = mysqli_query($conn, "SELECT * FROM konten WHERE kategori=1");
+
+                        $cari = $_POST['cari_judul'];
+                        $query = mysqli_query($conn, "SELECT * FROM konten WHERE judul LIKE '%" .$cari. "%'");
                         while($data = mysqli_fetch_array($query)){
                     ?>
                     <div class="container-card">
@@ -142,12 +135,11 @@
                         <label for="gambar" id="judul"> <?php echo $data['judul'] ?> </label>
                         <div id="tooltip"> <?php echo $data['judul'] ?> </div>
                     </div>
+
                     <?php } ?>
                 </div>
             </section>
             <!-- end : hasil searching-->
-
-
         </article>
     </main>
     <footer>
