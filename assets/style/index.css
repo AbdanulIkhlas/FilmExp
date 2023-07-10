@@ -232,6 +232,12 @@ header nav ul .li-navbar {
     width: 8vw;
 }
 
+header nav ul .li-navbar:nth-child(1) {
+    border: 2px solid rgb(201, 141, 2);
+    box-shadow: 2px 2px 2px 1px rgb(102, 66, 0);
+    transition: border .5s ease;
+}
+
 header nav ul .li-navbar a {
     text-decoration: none;
     color: white;
