@@ -26,7 +26,7 @@
                 <li class="li-navbar"><a href="index.php">HOME</a></li>
                 <li class="li-navbar">
                     GENRE
-                    <span>
+                    <span class="down-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                             <path
@@ -45,7 +45,7 @@
                 </li>
                 <li class="li-navbar">
                     NEGARA
-                    <span>
+                    <span class="down-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                             <path
@@ -64,7 +64,7 @@
                 </li>
                 <li class="li-navbar">
                     TAHUN
-                    <span>
+                    <span class="down-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                             <path
