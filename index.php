@@ -23,7 +23,7 @@
         </section>
         <nav>
             <ul class="ul-navbar">
-                <li class="li-navbar"><a href="index.html">HOME</a></li>
+                <li class="li-navbar"><a href="index.php">HOME</a></li>
                 <li class="li-navbar">
                     GENRE
                     <span>
