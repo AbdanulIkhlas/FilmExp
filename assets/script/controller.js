@@ -4,37 +4,42 @@
 const listNavbar = document.querySelectorAll('.li-navbar');
 
 listNavbar.forEach((navbar) => {
-    const dropdown = navbar.querySelector('.dropdown');
+  const dropdown = navbar.querySelector('.dropdown');
+  const downIcon = navbar.querySelector('.down-icon');
 
-    navbar.addEventListener('click', () => {
-        dropdown.classList.toggle('active');
-    });
-
+  navbar.addEventListener('click', () => {
+    downIcon.classList.toggle('rotate-icon');
+    dropdown.classList.toggle('active');
+  });
+  
 });
 
 //! ketika user klik di luar dropdown (menutup dropdown)
 document.addEventListener('click', (event) => {
   const dropdowns = document.querySelectorAll('.dropdown');
+  const downIcons = document.querySelectorAll('.down-icon');
 
-  dropdowns.forEach((dropdown) => {
+  dropdowns.forEach((dropdown, index) => {
     if (!dropdown.parentNode.contains(event.target)) {
+      downIcons[index].classList.remove('rotate-icon');
       dropdown.classList.remove('active');
     }
   });
 });
 
+
 //? Mengambil semua elemen label dengan id "judul"
-var labels = document.querySelectorAll("label#judul");
+let labels = document.querySelectorAll("label#judul");
 
 //? Proses loop setiap elemen label dan mengambil nilai teksnya
 labels.forEach(function(label) {
-  var container = label.parentNode;
-  var containerWidth = container.offsetWidth - 10;
-  var valueLabel = label.innerText;
+  let container = label.parentNode;
+  let containerWidth = container.offsetWidth - 10;
+  let valueLabel = label.innerText;
 
   //? Memeriksa apakah teks melebihi lebar kontainer
   if (label.scrollWidth > containerWidth) {
-    var truncatedText = valueLabel;
+    let truncatedText = valueLabel;
 
     while (label.scrollWidth > containerWidth && truncatedText.length > 0) {
       truncatedText = truncatedText.slice(0, -1);

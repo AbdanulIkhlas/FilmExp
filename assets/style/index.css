@@ -328,16 +328,30 @@ header nav section a {
     color: white;
 }
 
-.dropdown li a:hover {
-    color: orange;
+.dropdown li:hover {
+    background-color: #717a7b;
+    border-radius: 4px;
     transition: .25s;
 }
+
+.li-navbar .down-icon.rotate-icon {
+    transform: rotate(180deg);
+    transition: transform .2s ease-in-out;
+}
+
+.li-navbar .down-icon {
+    transition: transform .2s ease-in-out;
+}
+
+
 
 .li-navbar ul.active {
     display: flex;
     flex-direction: column;
-
+    transition: .5s ease;
 }
+
+
 
 /** end : style navbar  */
 /* ---------------------------------------------------- */
