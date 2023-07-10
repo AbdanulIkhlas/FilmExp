@@ -380,17 +380,6 @@ main article section h1 {
     font-weight: 600;
 }
 
-.all-cards {
-    display: flex;
-    overflow-x: auto;
-    /*? untuk mencegah pemisahan konten menjadi baris baru. */
-    white-space: nowrap;
-    height: 33.2vh;
-    margin: 8px;
-    box-sizing: border-box;
-    gap: 20px;
-}
-
 /*? style scrollbar main content  */
 
 /*?  Untuk WebKit (Chrome, Safari)   */
@@ -417,6 +406,17 @@ main article section h1 {
 *::-webkit-scrollbar-track {
     /*? Warna latar belakang track */
     background-color: transparent;
+}
+
+.all-cards {
+    display: flex;
+    overflow-x: auto;
+    /*? untuk mencegah pemisahan konten menjadi baris baru. */
+    white-space: nowrap;
+    height: 33.2vh;
+    margin: 8px;
+    box-sizing: border-box;
+    gap: 20px;
 }
 
 .all-cards .container-card {

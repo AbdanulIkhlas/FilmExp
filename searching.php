@@ -28,7 +28,7 @@
                 <li class="li-navbar"><a href="index.php">HOME</a></li>
                 <li class="li-navbar">
                     GENRE
-                    <span>
+                    <span class="down-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                             <path
@@ -47,7 +47,7 @@
                 </li>
                 <li class="li-navbar">
                     NEGARA
-                    <span>
+                    <span class="down-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                             <path
@@ -66,7 +66,7 @@
                 </li>
                 <li class="li-navbar">
                     TAHUN
-                    <span>
+                    <span class="down-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                             <path
@@ -118,7 +118,7 @@
                     <?php
 
                         $cari = $_POST['cari_judul'];
-                        $query = mysqli_query($conn, "SELECT * FROM konten WHERE judul LIKE '%" .$cari. "%'");
+                        $query = mysqli_query($conn, "SELECT * FROM konten WHERE CONCAT_WS(' ', judul, genre, negara, tahun) LIKE '%" .$cari. "%'");
                         while($data = mysqli_fetch_array($query)){
                     ?>
                     <div class="container-card">
@@ -135,7 +135,6 @@
                         <label for="gambar" id="judul"> <?php echo $data['judul'] ?> </label>
                         <div id="tooltip"> <?php echo $data['judul'] ?> </div>
                     </div>
-
                     <?php } ?>
                 </div>
             </section>
@@ -145,7 +144,7 @@
     <footer>
         &copy; 2023 Film Explainer
     </footer>
-    <script src="assets/script/index.js"></script>
+    <script src="assets/script/controller.js"></script>
 </body>
 
 </html>

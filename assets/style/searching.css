@@ -324,9 +324,19 @@ header nav section a {
     color: white;
 }
 
-.dropdown li a:hover {
-    color: orange;
+.dropdown li:hover {
+    background-color: #717a7b;
+    border-radius: 4px;
     transition: .25s;
+}
+
+.li-navbar .down-icon.rotate-icon {
+    transform: rotate(180deg);
+    transition: transform .2s ease-in-out;
+}
+
+.li-navbar .down-icon {
+    transition: transform .2s ease-in-out;
 }
 
 .li-navbar ul.active {
@@ -361,17 +371,6 @@ main article section h1 {
     font-weight: 600;
 }
 
-.all-cards {
-    display: flex;
-    /*? Mengatur wrap saat item lebih dari satu baris */
-    flex-wrap: wrap;
-    /*? Menghapus tinggi tetap untuk mengizinkan wrap */
-    height: auto;
-    margin: 8px;
-    box-sizing: border-box;
-    gap: 50px;
-    padding: 20px 20px 50px 20px;
-}
 
 /*? style scrollbar main content  */
 
@@ -399,6 +398,18 @@ main article section h1 {
 *::-webkit-scrollbar-track {
     /*? Warna latar belakang track */
     background-color: transparent;
+}
+
+.all-cards {
+    display: flex;
+    /*? Mengatur wrap saat item lebih dari satu baris */
+    flex-wrap: wrap;
+    /*? Menghapus tinggi tetap untuk mengizinkan wrap */
+    height: auto;
+    margin: 8px;
+    box-sizing: border-box;
+    gap: 50px;
+    padding: 20px 20px 50px 20px;
 }
 
 .all-cards .container-card {
@@ -432,6 +443,8 @@ main article section h1 {
     left: 5px;
     font-size: 12pt;
     font-weight: 500;
+    /*? untuk mencegah pemisahan konten menjadi baris baru. */
+    white-space: nowrap;
 }
 
 .all-cards .container-card #tooltip {
@@ -446,6 +459,8 @@ main article section h1 {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    /*? untuk mencegah pemisahan konten menjadi baris baru. */
+    white-space: nowrap;
 }
 
 .all-cards .container-card label#judul:hover+#tooltip {
