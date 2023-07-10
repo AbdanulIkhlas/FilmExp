@@ -374,6 +374,7 @@ main article section h1 {
     height: 33.2vh;
     margin: 8px;
     box-sizing: border-box;
+    gap: 20px;
 }
 
 /*? style scrollbar main content  */
@@ -564,6 +565,17 @@ footer {
     line-height: 4rem;
     font-size: 16pt;
     color: white;
+}
+
+/*! untuk membuat footer tetap di bawah main  */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 /** end : style navbar  */
