@@ -197,7 +197,7 @@
     <footer>
         &copy; 2023 Film Explainer
     </footer>
-    <script src="assets/script/index.js"></script>
+    <script src="assets/script/controller.js"></script>
 </body>
 
 </html>
