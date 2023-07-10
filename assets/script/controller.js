@@ -1,3 +1,5 @@
+//! ----------- Style Index ---------------- 
+
 //! Action ketika list navbar di klik maka keluar dropdown
 const listNavbar = document.querySelectorAll('.li-navbar');
 
@@ -55,5 +57,7 @@ label.addEventListener("mouseover", function() {
 label.addEventListener("mouseout", function() {
   tooltip.style.display = "none";
 });
+
+//! ----------- End Style Index ---------------- 
 
 
