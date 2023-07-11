@@ -1,0 +1,503 @@
+/*! CSS RESET  */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*! CSS Halaman Sinopsis */
+
+/*! start : style scrollbar */
+/*? Untuk WebKit (Chrome, Safari)   */
+
+::-webkit-scrollbar {
+    /*? Ukuran lebar scroll bar */
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    /*? Warna scroll bar */
+    background-color: #E0FBFC;
+}
+
+/*? Untuk Firefox */
+
+* {
+    /*? Ukuran lebar scroll bar */
+    scrollbar-width: thin;
+    /*? Warna scroll bar */
+    scrollbar-color: #E0FBFC transparent;
+}
+
+*::-webkit-scrollbar-track {
+    /*? Warna latar belakang track */
+    background-color: transparent;
+}
+
+
+/** end : style scrollbar  */
+
+body {
+    background-color: #293241;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+header {
+    width: 100%;
+    height: 5em;
+    background-color: #000;
+    box-sizing: border-box;
+    padding-inline: 3rem;
+    display: flex;
+}
+
+/*! start : style logo */
+header section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header section img {
+    width: 230px;
+}
+
+/** end : style logo  */
+/* ---------------------------------------------------- */
+/*! start : style navbar  */
+
+header nav {
+    width: 100vw;
+    height: 4.9em;
+    display: inline-block;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+header nav .ul-navbar {
+    border-right: 3px solid white;
+    height: 4rem;
+    line-height: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: right;
+    align-items: center;
+    padding-inline: 25px;
+}
+
+header nav ul .li-navbar {
+    position: relative;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.2vh;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 2px;
+    gap: 5px;
+    cursor: pointer;
+    width: 8vw;
+}
+
+header nav ul .li-navbar:nth-child(1) {
+    border: 2px solid rgb(201, 141, 2);
+    box-shadow: 2px 2px 2px 1px rgb(102, 66, 0);
+    transition: border .5s ease;
+}
+
+header nav ul .li-navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav ul li span {
+    display: flex;
+    align-items: center;
+}
+
+
+header nav section {
+    line-height: 4.9em;
+    height: 4rem;
+    width: 20vw;
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    padding-inline: 25px;
+    gap: 25px;
+    box-sizing: border-box;
+}
+
+header nav section a {
+    text-decoration: none;
+    color: white;
+}
+
+.searching {
+    display: flex;
+    box-sizing: border-box;
+    height: 4vh;
+    width: 13vw;
+}
+
+.searching .search-icon {
+    background-color: black;
+    border: 1px solid white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.searching input {
+    width: 100%;
+    color: white;
+    background-color: black;
+    font-size: 12pt;
+    border: 1px solid white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.searching input:focus {
+    outline: none;
+}
+
+.login {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.dropdown {
+    position: absolute;
+    border: 1px solid white;
+    right: 0;
+    top: 32px;
+    width: 8vw;
+    padding-block: 18px;
+    box-sizing: border-box;
+    display: none;
+    gap: 10px;
+    border-radius: 5px;
+    background-color: black;
+    z-index: 999;
+
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown li:hover {
+    background-color: #717a7b;
+    border-radius: 4px;
+    transition: .25s;
+}
+
+.li-navbar .down-icon.rotate-icon {
+    transform: rotate(180deg);
+    transition: transform .2s ease-in-out;
+}
+
+.li-navbar .down-icon {
+    transition: transform .2s ease-in-out;
+}
+
+
+
+.li-navbar ul.active {
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease;
+}
+
+
+
+/** end : style navbar  */
+/* ---------------------------------------------------- */
+/*! start : style main  */
+
+main article {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3rem;
+}
+
+
+main article section {
+    height: 41.5vh;
+    border: 3px solid white;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #364152;
+    box-shadow: 0 0 20px 1px black;
+    margin-bottom: 50px;
+}
+
+/** end : style navbar  */
+/* ---------------------------------------------------- */
+/*! start : style footer */
+
+footer {
+    width: 100%;
+    background-color: #18191a;
+    color: white;
+}
+
+footer h1 {
+    font-size: 16pt;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+footer .container {
+    border-bottom: 2px double white;
+    margin-inline: 50px;
+    display: flex;
+    gap: 10px;
+    box-sizing: border-box;
+    padding-block: 30px;
+}
+
+footer .container .deskripsi {
+    width: 30vw;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+footer .container .title {
+    text-align: center;
+    font-size: 16pt;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+footer .container .title .garis {
+    width: 100%;
+    height: 0;
+    border: 1px solid orange;
+}
+
+footer .container section {
+    width: 70vw;
+}
+
+footer .container .author {
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.author ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.author ul li {
+    display: flex;
+    background-color: #364152;
+    border: 2px solid white;
+    width: 20vw;
+    box-shadow: 2px 2px 5px 1px #333636;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.author ul li img {
+    background-color: #717a7b;
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 50px;
+}
+
+.author .container-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.author .container-info a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    gap: 5px;
+}
+
+footer .container .contact {
+    padding: 10px;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.contact ul li {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+
+/*! untuk membuat footer tetap di bawah main  */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    min-height: 100vh;
+}
+
+/** end : style navbar  */
+/* ---------------------------------------------------- */
