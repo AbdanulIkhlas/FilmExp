@@ -365,7 +365,7 @@ main article {
 
 
 main article section {
-    height: 40vh;
+    height: 41.5vh;
     border: 3px solid white;
     border-radius: 8px;
     box-sizing: border-box;
@@ -376,6 +376,7 @@ main article section {
 
 main article section h1 {
     padding: 8px;
+    padding-left: 30px;
     border-bottom: 3px solid white;
     font-weight: 600;
 }
@@ -413,9 +414,10 @@ main article section h1 {
     overflow-x: auto;
     /*? untuk mencegah pemisahan konten menjadi baris baru. */
     white-space: nowrap;
-    height: 33.2vh;
+    height: 34.5vh;
     margin: 8px;
     box-sizing: border-box;
+    padding: 15px;
     gap: 20px;
 }
 
@@ -586,7 +588,7 @@ footer h1 {
 }
 
 footer .container {
-    border-top: 1px double white;
+    border-bottom: 2px double white;
     margin-inline: 50px;
     display: flex;
     gap: 10px;
@@ -669,7 +671,6 @@ footer .container .author {
 footer .container .contact {
     padding: 10px;
     box-sizing: border-box;
-    margin-bottom: 20px;
     white-space: nowrap;
 }
 
@@ -690,6 +691,7 @@ body {
 
 main {
     flex: 1;
+    min-height: 100vh;
 }
 
 /** end : style navbar  */
