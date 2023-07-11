@@ -135,7 +135,28 @@
         <article>
             <!-- Halaman Sinopsis -->
             <section>
-
+                <!-- GANTI SEMUA DATA NYA -->
+                <div class="container">
+                    <div class="picture">
+                        <!-- ukuran foto sama seperti di index.html -->
+                        <img src="assets/image/film/haikyu.png" alt="Haikyu">
+                    </div>
+                    <div class="information">
+                        <h2>HAIKYU</h2>
+                        <h3>Tahun : 2023</h3>
+                        <h3>Genre : Animation</h3>
+                    </div>
+                </div>
+                <div class="sinopsis">
+                    <h1>SINOPSIS HAIKYU</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias voluptas harum laboriosam
+                        iusto consectetur tempora dignissimos esse, alias reprehenderit provident itaque sed amet fuga
+                        laudantium aspernatur, et delectus id aperiam maxime doloremque tenetur saepe asperiores vero.
+                        Exercitationem dolores eveniet reiciendis velit mollitia minima minus? Voluptas, debitis
+                        excepturi. Tenetur, et ratione?
+                    </p>
+                </div>
             </section>
             <!-- end : Halaman Sinopsis -->
         </article>

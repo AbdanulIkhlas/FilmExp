@@ -365,13 +365,51 @@ main article {
 
 
 main article section {
-    height: 41.5vh;
+    padding: 30px;
     border: 3px solid white;
     border-radius: 8px;
     box-sizing: border-box;
     background-color: #364152;
     box-shadow: 0 0 20px 1px black;
     margin-bottom: 50px;
+}
+
+main article section .container {
+    border: 1px solid white;
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.container .picture {
+    object-fit: cover;
+    width: 10vw;
+    height: 100%;
+    border: 3px solid white;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.container .picture img {
+    border-radius: 3px;
+}
+
+.container .information {
+    width: 90vw;
+    height: 100%;
+    border: 1px solid yellow;
+}
+
+main article section .sinopsis {
+    border: 1px solid white;
+    width: 100%;
+    height: 60vh;
+    box-sizing: border-box;
 }
 
 /** end : style navbar  */
