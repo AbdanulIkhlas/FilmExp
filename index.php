@@ -144,20 +144,6 @@
                         <label for="gambar" id="judul"> <?php echo $data['judul'] ?> </label>
                         <div id="tooltip"> <?php echo $data['judul'] ?> </div>
                     </div>
-                    <div class="container-card">
-                        <div class="card">
-                            <a href=halamanSinopsis.php?id=<?php echo $data['id']; ?>>
-                                <div class="info">
-                                    <div class="negara"> <?php echo $data['negara'] ?> </div>
-                                    <div class="tahun"> <?php echo $data['tahun'] ?> </div>
-                                </div>
-                                <img id="gambar" src="assets/image/film/<?php echo $data['gambar']; ?>" alt="">
-                                <div class=" genre"> <?php echo $data['genre'] ?> </div>
-                            </a>
-                        </div>
-                        <label for="gambar" id="judul"> <?php echo $data['judul'] ?> </label>
-                        <div id="tooltip"> <?php echo $data['judul'] ?> </div>
-                    </div>
                     <?php } ?>
                 </div>
             </section>
