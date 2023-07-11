@@ -1,6 +1,7 @@
 <?php
     session_start();
     include 'koneksi.php';
+    $kodeGet = 0;
 ?>
 
 <!DOCTYPE html>
