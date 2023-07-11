@@ -154,9 +154,6 @@
         </article>
     </main>
     <footer>
-        <h1>
-            &copy; 2023 Film Explainer
-        </h1>
         <section class="container">
             <div class="deskripsi">
                 <div class="title">
@@ -244,6 +241,9 @@
                 </div>
             </section>
         </section>
+        <h1>
+            &copy; 2023 Film Explainer
+        </h1>
     </footer>
     <script src="assets/script/controller.js"></script>
 </body>

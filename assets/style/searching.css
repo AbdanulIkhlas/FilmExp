@@ -367,37 +367,9 @@ main article section {
 
 main article section h1 {
     padding: 8px;
+    padding-left: 35px;
     border-bottom: 3px solid white;
     font-weight: 600;
-}
-
-
-/*? style scrollbar main content  */
-
-/*?  Untuk WebKit (Chrome, Safari)   */
-::-webkit-scrollbar {
-    /*? Ukuran lebar scroll bar */
-    width: 4.5px;
-    height: 4.5px;
-}
-
-::-webkit-scrollbar-thumb {
-    /*? Warna scroll bar */
-    background-color: #717a7b;
-
-}
-
-/*? Untuk Firefox */
-* {
-    /*? Ukuran lebar scroll bar */
-    scrollbar-width: thin;
-    /*? Warna scroll bar */
-    scrollbar-color: #E0FBFC transparent;
-}
-
-*::-webkit-scrollbar-track {
-    /*? Warna latar belakang track */
-    background-color: transparent;
 }
 
 .all-cards {
@@ -408,8 +380,8 @@ main article section h1 {
     height: auto;
     margin: 8px;
     box-sizing: border-box;
-    gap: 50px;
-    padding: 20px 20px 50px 20px;
+    gap: 60px 45px;
+    padding: 20px 20px 50px 30px;
 }
 
 .all-cards .container-card {
@@ -584,7 +556,7 @@ footer h1 {
 }
 
 footer .container {
-    border-top: 1px double white;
+    border-bottom: 2px double white;
     margin-inline: 50px;
     display: flex;
     gap: 10px;
@@ -686,6 +658,7 @@ body {
 
 main {
     flex: 1;
+    min-height: 100vh;
 }
 
 /** end : style navbar  */
