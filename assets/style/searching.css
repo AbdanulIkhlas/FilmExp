@@ -372,35 +372,6 @@ main article section h1 {
     font-weight: 600;
 }
 
-
-/*? style scrollbar main content  */
-
-/*?  Untuk WebKit (Chrome, Safari)   */
-::-webkit-scrollbar {
-    /*? Ukuran lebar scroll bar */
-    width: 4.5px;
-    height: 4.5px;
-}
-
-::-webkit-scrollbar-thumb {
-    /*? Warna scroll bar */
-    background-color: #717a7b;
-
-}
-
-/*? Untuk Firefox */
-* {
-    /*? Ukuran lebar scroll bar */
-    scrollbar-width: thin;
-    /*? Warna scroll bar */
-    scrollbar-color: #E0FBFC transparent;
-}
-
-*::-webkit-scrollbar-track {
-    /*? Warna latar belakang track */
-    background-color: transparent;
-}
-
 .all-cards {
     display: flex;
     /*? Mengatur wrap saat item lebih dari satu baris */
