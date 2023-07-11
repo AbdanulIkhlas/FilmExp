@@ -143,12 +143,12 @@
                     </div>
                     <div class="information">
                         <h2>HAIKYU</h2>
-                        <h3>Tahun : 2023</h3>
-                        <h3>Genre : Animation</h3>
+                        <p>Tahun : 2023</p>
+                        <p>Genre : Animation</p>
                     </div>
                 </div>
                 <div class="sinopsis">
-                    <h1>SINOPSIS HAIKYU</h1>
+                    <h1>SINOPSIS</h1>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias voluptas harum laboriosam
                         iusto consectetur tempora dignissimos esse, alias reprehenderit provident itaque sed amet fuga
