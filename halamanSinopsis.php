@@ -13,6 +13,7 @@
 <?php
     session_start();
     include 'koneksi.php';
+    $id = $_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -76,7 +77,7 @@
                         ?>
                         <!-- kode 2 : untuk negara  -->
                         <li>
-                            <a href="filtering.php?kode=1&data=<?php echo $data['negara']; ?>">
+                            <a href="filtering.php?kode=2&data=<?php echo $data['negara']; ?>">
                                 <?php echo $data['negara']; ?> </a>
                         </li>
                         <?php } ?>
@@ -134,30 +135,37 @@
     <main>
         <article>
             <!-- Halaman Sinopsis -->
+
+            <?php
+                $query = mysqli_query($conn, "SELECT * FROM konten WHERE id=$id");
+                while($data = mysqli_fetch_array($query)){
+            ?>
+
             <section>
                 <!-- GANTI SEMUA DATA NYA -->
                 <div class="container">
                     <div class="picture">
                         <!-- ukuran foto sama seperti di index.html -->
-                        <img src="assets/image/film/haikyu.png" alt="Haikyu">
+                        
+                        <!-- ikhsan : gambar perlu css -->
+                        <img src="assets/image/film/<?php echo $data['gambar']; ?>" alt="Haikyu">
                     </div>
                     <div class="information">
-                        <h2>HAIKYU</h2>
-                        <p>Tahun : 2023</p>
-                        <p>Genre : Animation</p>
+                        <h2> <?php echo $data['judul'] ?> </h2>
+                        <p>Tahun : <?php echo $data['tahun'] ?> </p>
+                        <p>Genre : <?php echo $data['genre'] ?> </p>
                     </div>
                 </div>
                 <div class="sinopsis">
                     <h1>SINOPSIS</h1>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias voluptas harum laboriosam
-                        iusto consectetur tempora dignissimos esse, alias reprehenderit provident itaque sed amet fuga
-                        laudantium aspernatur, et delectus id aperiam maxime doloremque tenetur saepe asperiores vero.
-                        Exercitationem dolores eveniet reiciendis velit mollitia minima minus? Voluptas, debitis
-                        excepturi. Tenetur, et ratione?
+                        <?php echo $data['sinopsis'] ?>
                     </p>
                 </div>
             </section>
+
+            <?php } ?>
+            
             <!-- end : Halaman Sinopsis -->
         </article>
     </main>
