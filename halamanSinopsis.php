@@ -1,16 +1,4 @@
 <?php
-    // session_start();
-    // include 'koneksi.php';
-    // if($_SESSION['cek'] != true){
-    //     // ikhsan : mengambil data konten dari index.php
-    //     $id = $_GET['id'];
-    //     $query = mysqli_query($conn, "SELECT * FROM konten WHERE id = $id");
-    //     $data = mysqli_fetch_array($query);
-    // }
-    
-?>
-
-<?php
     session_start();
     include 'koneksi.php';
     $id = $_GET['id'];
@@ -146,7 +134,7 @@
                 <div class="container">
                     <div class="picture">
                         <!-- ukuran foto sama seperti di index.html -->
-                        
+
                         <!-- ikhsan : gambar perlu css -->
                         <img src="assets/image/film/<?php echo $data['gambar']; ?>" alt="Haikyu">
                     </div>
