@@ -66,7 +66,7 @@
                         ?>
                         <!-- kode 2 : untuk negara  -->
                         <li>
-                            <a href="filtering.php?kode=1&data=<?php echo $data['negara']; ?>">
+                            <a href="filtering.php?kode=2&data=<?php echo $data['negara']; ?>">
                                 <?php echo $data['negara']; ?> </a>
                         </li>
                         <?php } ?>
@@ -130,8 +130,22 @@
             <section>
                 <h1>HASIL PENCARIAN</h1>
                 <div class="all-cards">
+                    
+                    <!-- Ikhsan : Filtering tahap pertama -->
                     <?php
-                        $query = mysqli_query($conn, "SELECT * FROM konten WHERE CONCAT_WS(' ', judul, genre, negara, tahun) LIKE '%" .$cari. "%'");
+                        $kodeGet = $_GET['kode'];
+                        $dataGet = $_GET['data'];
+
+                        if($kodeGet == 1){
+                            $query = mysqli_query($conn, "SELECT * FROM konten WHERE genre='$dataGet'");
+                        }else if($kodeGet == 2){
+                            $query = mysqli_query($conn, "SELECT * FROM konten WHERE negara='$dataGet'");
+                        }else if($kodeGet == 3){
+                            $query = mysqli_query($conn, "SELECT * FROM konten WHERE tahun=$dataGet");
+                        }else{
+                            $query = mysqli_query($conn, "SELECT * FROM konten WHERE CONCAT_WS(' ', judul, genre, negara, tahun) LIKE '%" .$cari. "%'");
+                        }
+                        
                         while($data = mysqli_fetch_array($query)){
                     ?>
                     <div class="container-card">

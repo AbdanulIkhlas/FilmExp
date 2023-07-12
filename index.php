@@ -1,6 +1,7 @@
 <?php
     session_start();
     include 'koneksi.php';
+    $kodeGet = 0;
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +65,7 @@
                         ?>
                         <!-- kode 2 : untuk negara  -->
                         <li>
-                            <a href="filtering.php?kode=1&data=<?php echo $data['negara']; ?>">
+                            <a href="filtering.php?kode=2&data=<?php echo $data['negara']; ?>">
                                 <?php echo $data['negara']; ?> </a>
                         </li>
                         <?php } ?>
