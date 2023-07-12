@@ -84,7 +84,7 @@
                     <ul class="dropdown">
                         <!-- ikhsan : database tahun -->
                         <?php
-                            $query = mysqli_query($conn, "SELECT * FROM navbar_tahun");
+                            $query = mysqli_query($conn, "SELECT * FROM navbar_tahun ORDER BY tahun DESC");
                             while($data = mysqli_fetch_array($query)){
                         ?>
                         <!-- kode 3 : untuk tahun  -->
@@ -130,7 +130,7 @@
             <section>
                 <h1>HASIL PENCARIAN</h1>
                 <div class="all-cards">
-                    
+
                     <!-- Ikhsan : Filtering tahap pertama -->
                     <?php
                         $kodeGet = $_GET['kode'];
