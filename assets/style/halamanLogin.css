@@ -1,0 +1,46 @@
+/*! CSS Login */
+
+body {
+    background-color: #293241;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96vh;
+}
+
+/*! Start : Style main */
+
+main {
+    width: 30vw;
+    height: 60vh;
+    padding: 10px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .logo {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+main .logo img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 5px;
+}
+
+/** End : Style main */
+/* ---------------------------------------------- */
