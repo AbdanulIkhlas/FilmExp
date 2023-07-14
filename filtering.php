@@ -11,6 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film Explainer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/filtering.css">
 </head>
 
@@ -123,27 +125,141 @@
         <article>
             <!-- hasil filtering berdasarkan kode -->
             <aside>
-
-            </aside>
-            <section>
-                <h1>HASIL PENCARIAN</h1>
-                <div class="all-cards">
-
-                    <!-- Ikhsan : Filtering tahap pertama -->
-                    <?php
+                <h1>TAMBAH FILTER</h1>
+                <div class="container-filter">
+                    <form action="filtering.php" method="post">
+                        <?php 
                         $kodeGet = $_GET['kode'];
                         $dataGet = $_GET['data'];
-
                         if($kodeGet == 1){
-                            $query = mysqli_query($conn, "SELECT * FROM konten WHERE genre='$dataGet'");
+                        //! ---------- FILTER TERPILIH GENRE ---------- 
+                        ?>
+                        <div class="mb-4">
+                            <label for="exampleInputEmail1" class="form-label">NEGARA</label>
+                            <select class="form-select form-select-mb-1 " name="negara[]" multiple
+                                multiselect-search="true" multiselect-max-items="8" aria-label=".form-select-mb example"
+                                style=" padding: 7.5px;">
+                                <?php
+                                        $query = mysqli_query($conn, "SELECT * FROM navbar_negara ORDER BY negara ASC");
+                                        while($data = mysqli_fetch_array($query)){
+                                    ?>
+                                <option value="<?php echo $data['negara'] ?>">
+                                    <?php echo $data['negara'] ?>
+                                </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleInputEmail1" class="form-label">TAHUN</label>
+                            <select class="form-select form-select-mb-1 " name="tahun[]" multiple
+                                multiselect-search="true" multiselect-max-items="8" aria-label=".form-select-mb example"
+                                style=" padding: 7.5px;">
+                                <?php
+                                        $query = mysqli_query($conn, "SELECT * FROM navbar_tahun ORDER BY tahun DESC");
+                                        while($data = mysqli_fetch_array($query)){
+                                    ?>
+                                <option value="<?php echo $data['tahun'] ?>">
+                                    <?php echo $data['tahun'] ?>
+                                </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <?php 
                         }else if($kodeGet == 2){
-                            $query = mysqli_query($conn, "SELECT * FROM konten WHERE negara='$dataGet'");
+                        //! ---------- FILTER TERPILIH NEGARA ---------- 
+                        ?>
+                        <div class="mb-4">
+                            <label for="exampleInputEmail1" class="form-label">GENRE</label>
+                            <select class="form-select form-select-mb-1 " name="genre[]" multiple
+                                multiselect-search="true" multiselect-max-items="8" aria-label=".form-select-mb example"
+                                style=" padding: 7.5px;">
+                                <?php
+                                            $query = mysqli_query($conn, "SELECT * FROM navbar_genre ORDER BY genre ASC");
+                                            while($data = mysqli_fetch_array($query)){
+                                        ?>
+                                <option value="<?php echo $data['genre'] ?>">
+                                    <?php echo $data['genre'] ?>
+                                </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleInputEmail1" class="form-label">TAHUN</label>
+                            <select class="form-select form-select-mb-1 " name="tahun[]" multiple
+                                multiselect-search="true" multiselect-max-items="8" aria-label=".form-select-mb example"
+                                style=" padding: 7.5px;">
+                                <?php
+                                            $query = mysqli_query($conn, "SELECT * FROM navbar_tahun ORDER BY tahun DESC");
+                                            while($data = mysqli_fetch_array($query)){
+                                        ?>
+                                <option value="<?php echo $data['tahun'] ?>">
+                                    <?php echo $data['tahun'] ?>
+                                </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <?php 
                         }else if($kodeGet == 3){
-                            $query = mysqli_query($conn, "SELECT * FROM konten WHERE tahun=$dataGet");
-                        }else{
-                            $query = mysqli_query($conn, "SELECT * FROM konten WHERE CONCAT_WS(' ', judul, genre, negara, tahun) LIKE '%" .$cari. "%'");
+                        //! ---------- FILTER TERPILIH TAHUN ---------- 
+                        ?>
+                        <div class="mb-4">
+                            <label for="exampleInputEmail1" class="form-label">GENRE</label>
+                            <select class="form-select form-select-mb-1 " name="genre[]" multiple
+                                multiselect-search="true" multiselect-max-items="2" aria-label=".form-select-mb example"
+                                style=" padding: 7.5px;">
+                                <?php
+                                            $query = mysqli_query($conn, "SELECT * FROM navbar_genre ORDER BY genre ASC");
+                                            while($data = mysqli_fetch_array($query)){
+                                        ?>
+                                <option value="<?php echo $data['genre'] ?>">
+                                    <?php echo $data['genre'] ?>
+                                </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleInputEmail1" class="form-label">NEGARA</label>
+                            <select class="form-select form-select-mb-1 " name="negara[]" multiple
+                                multiselect-search="true" multiselect-max-items="2" aria-label=".form-select-mb example"
+                                style=" padding: 7.5px;">
+                                <?php
+                                            $query = mysqli_query($conn, "SELECT * FROM navbar_negara ORDER BY negara ASC");
+                                            while($data = mysqli_fetch_array($query)){
+                                        ?>
+                                <option value="<?php echo $data['negara'] ?>">
+                                    <?php echo $data['negara'] ?>
+                                </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <?php 
                         }
-                        
+                        ?>
+
+                        <button class="button-tambah-filter" type="submit">Tambah Filter</button>
+                    </form>
+                </div>
+            </aside>
+            <section>
+                <?php 
+                if($kodeGet == 1){
+                    $query = mysqli_query($conn, "SELECT * FROM konten WHERE genre='$dataGet'");
+                    $filter = "GENRE";
+                }else if($kodeGet == 2){
+                    $query = mysqli_query($conn, "SELECT * FROM konten WHERE negara='$dataGet'");
+                    $filter = "NEGARA";
+                }else if($kodeGet == 3){
+                    $query = mysqli_query($conn, "SELECT * FROM konten WHERE tahun=$dataGet");
+                    $filter = "TAHUN";
+                }else{
+                    $query = mysqli_query($conn, "SELECT * FROM konten WHERE CONCAT_WS(' ', judul, genre, negara, tahun) LIKE '%" .$cari. "%'");
+                }
+                
+                ?>
+                <h1>FILTER BERDASARKAN <?php echo $filter ?> : <?php echo $dataGet ?></h1>
+                <div class="all-cards">
+                    <!-- Ikhsan : Filtering tahap pertama -->
+                    <?php
                         while($data = mysqli_fetch_array($query)){
                     ?>
                     <div class="container-card">
@@ -170,6 +286,7 @@
         &copy; 2023 Film Explainer
     </footer>
     <script src="assets/script/controller.js"></script>
+    <script src="assets/script/filter.js"></script>
 </body>
 
 </html>

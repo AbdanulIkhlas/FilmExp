@@ -229,6 +229,7 @@ header nav ul .li-navbar {
     border: 2px solid white;
     border-radius: 5px;
     padding: 2px;
+    padding-block: 12px;
     gap: 5px;
     cursor: pointer;
     width: 8vw;
@@ -347,57 +348,33 @@ header nav section a {
 
 /** end : style navbar  */
 /* ---------------------------------------------------- */
-/*! start : style main  */
+/*! start : style main (section) */
 
 main article {
     width: 100%;
     box-sizing: border-box;
     padding: 3rem;
+    display: flex;
+    gap: 20px;
 }
 
 
 main article section {
+    width: 80%;
     border: 3px solid white;
     border-radius: 8px;
     box-sizing: border-box;
     background-color: #364152;
     box-shadow: 0 0 20px 1px black;
     margin-bottom: 50px;
+    order: 1;
 }
 
 main article section h1 {
     padding: 8px;
+    padding-left: 30px;
     border-bottom: 3px solid white;
     font-weight: 600;
-}
-
-
-/*? style scrollbar main content  */
-
-/*?  Untuk WebKit (Chrome, Safari)   */
-::-webkit-scrollbar {
-    /*? Ukuran lebar scroll bar */
-    width: 4.5px;
-    height: 4.5px;
-}
-
-::-webkit-scrollbar-thumb {
-    /*? Warna scroll bar */
-    background-color: #717a7b;
-
-}
-
-/*? Untuk Firefox */
-* {
-    /*? Ukuran lebar scroll bar */
-    scrollbar-width: thin;
-    /*? Warna scroll bar */
-    scrollbar-color: #E0FBFC transparent;
-}
-
-*::-webkit-scrollbar-track {
-    /*? Warna latar belakang track */
-    background-color: transparent;
 }
 
 .all-cards {
@@ -408,7 +385,7 @@ main article section h1 {
     height: auto;
     margin: 8px;
     box-sizing: border-box;
-    gap: 50px;
+    gap: 30px;
     padding: 20px 20px 50px 20px;
 }
 
@@ -565,7 +542,48 @@ main article section h1 {
     transform: translateY(0);
 }
 
-/** end : style navbar  */
+/** end : style main (section)  */
+/* ---------------------------------------------------- */
+/*! start : style main (aside)  */
+
+main article aside {
+    order: 2;
+    height: 100%;
+    min-height: 80vh;
+    width: 20%;
+    border: 3px solid white;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #364152;
+    box-shadow: 0 0 20px 1px black;
+    margin-bottom: 50px;
+}
+
+main article aside h1 {
+    text-align: center;
+    padding: 8px;
+    border-bottom: 3px solid white;
+    font-weight: 600;
+}
+
+main article aside .container-filter {
+    padding: 20px;
+    width: 100%;
+}
+
+.button-tambah-filter {
+    padding: 5px;
+    background-color: #596473;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 3px 3px 5px 1px black;
+    margin-top: 45px;
+}
+
+
+
+/** end : style main (aside)  */
 /* ---------------------------------------------------- */
 /*! start : style footer */
 
