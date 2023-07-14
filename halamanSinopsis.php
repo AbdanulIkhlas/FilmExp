@@ -123,19 +123,13 @@
     <main>
         <article>
             <!-- Halaman Sinopsis -->
-
             <?php
                 $query = mysqli_query($conn, "SELECT * FROM konten WHERE id=$id");
                 while($data = mysqli_fetch_array($query)){
             ?>
-
             <section>
-                <!-- GANTI SEMUA DATA NYA -->
                 <div class="container">
                     <div class="picture">
-                        <!-- ukuran foto sama seperti di index.html -->
-
-                        <!-- ikhsan : gambar perlu css -->
                         <img src="assets/image/film/<?php echo $data['gambar']; ?>" alt="Haikyu">
                     </div>
                     <div class="information">
@@ -151,9 +145,7 @@
                     </p>
                 </div>
             </section>
-
             <?php } ?>
-            
             <!-- end : Halaman Sinopsis -->
         </article>
     </main>
