@@ -1,6 +1,8 @@
 <?php
     session_start();
     include 'koneksi.php';  
+    $kodeGet = $_GET['kode'];
+    $dataGet = $_GET['data'];
 ?>
 
 <!DOCTYPE html>
@@ -129,16 +131,14 @@
                 <div class="container-filter">
                     <form action="filtering.php" method="post">
                         <?php 
-                        $kodeGet = $_GET['kode'];
-                        $dataGet = $_GET['data'];
                         if($kodeGet == 1){
                         //! ---------- FILTER TERPILIH GENRE ---------- 
                         ?>
                         <div class="mb-4">
                             <label for="exampleInputEmail1" class="form-label">NEGARA</label>
-                            <select class="form-select form-select-mb-1 " name="negara[]" multiple
-                                multiselect-search="true" multiselect-max-items="8" aria-label=".form-select-mb example"
-                                style=" padding: 7.5px;">
+                            <!-- name="filterPertama[]"  dst bisa di ganti -->
+                            <select class="form-select form-select-mb-1 " name="filterPertama[]" multiple
+                                multiselect-search="true" aria-label=".form-select-mb example" style=" padding: 7.5px;">
                                 <?php
                                         $query = mysqli_query($conn, "SELECT * FROM navbar_negara ORDER BY negara ASC");
                                         while($data = mysqli_fetch_array($query)){
@@ -151,9 +151,8 @@
                         </div>
                         <div class="mb-4">
                             <label for="exampleInputEmail1" class="form-label">TAHUN</label>
-                            <select class="form-select form-select-mb-1 " name="tahun[]" multiple
-                                multiselect-search="true" multiselect-max-items="8" aria-label=".form-select-mb example"
-                                style=" padding: 7.5px;">
+                            <select class="form-select form-select-mb-1 " name="filterKedua[]" multiple
+                                multiselect-search="true" aria-label=".form-select-mb example" style=" padding: 7.5px;">
                                 <?php
                                         $query = mysqli_query($conn, "SELECT * FROM navbar_tahun ORDER BY tahun DESC");
                                         while($data = mysqli_fetch_array($query)){
@@ -170,9 +169,8 @@
                         ?>
                         <div class="mb-4">
                             <label for="exampleInputEmail1" class="form-label">GENRE</label>
-                            <select class="form-select form-select-mb-1 " name="genre[]" multiple
-                                multiselect-search="true" multiselect-max-items="8" aria-label=".form-select-mb example"
-                                style=" padding: 7.5px;">
+                            <select class="form-select form-select-mb-1 " name="filterPertama[]" multiple
+                                multiselect-search="true" aria-label=".form-select-mb example" style=" padding: 7.5px;">
                                 <?php
                                             $query = mysqli_query($conn, "SELECT * FROM navbar_genre ORDER BY genre ASC");
                                             while($data = mysqli_fetch_array($query)){
@@ -185,9 +183,8 @@
                         </div>
                         <div class="mb-4">
                             <label for="exampleInputEmail1" class="form-label">TAHUN</label>
-                            <select class="form-select form-select-mb-1 " name="tahun[]" multiple
-                                multiselect-search="true" multiselect-max-items="8" aria-label=".form-select-mb example"
-                                style=" padding: 7.5px;">
+                            <select class="form-select form-select-mb-1 " name="filterKedua[]" multiple
+                                multiselect-search="true" aria-label=".form-select-mb example" style=" padding: 7.5px;">
                                 <?php
                                             $query = mysqli_query($conn, "SELECT * FROM navbar_tahun ORDER BY tahun DESC");
                                             while($data = mysqli_fetch_array($query)){
@@ -204,9 +201,8 @@
                         ?>
                         <div class="mb-4">
                             <label for="exampleInputEmail1" class="form-label">GENRE</label>
-                            <select class="form-select form-select-mb-1 " name="genre[]" multiple
-                                multiselect-search="true" multiselect-max-items="2" aria-label=".form-select-mb example"
-                                style=" padding: 7.5px;">
+                            <select class="form-select form-select-mb-1 " name="filterPertama[]" multiple
+                                multiselect-search="true" aria-label=".form-select-mb example" style=" padding: 7.5px;">
                                 <?php
                                             $query = mysqli_query($conn, "SELECT * FROM navbar_genre ORDER BY genre ASC");
                                             while($data = mysqli_fetch_array($query)){
@@ -219,9 +215,8 @@
                         </div>
                         <div class="mb-4">
                             <label for="exampleInputEmail1" class="form-label">NEGARA</label>
-                            <select class="form-select form-select-mb-1 " name="negara[]" multiple
-                                multiselect-search="true" multiselect-max-items="2" aria-label=".form-select-mb example"
-                                style=" padding: 7.5px;">
+                            <select class="form-select form-select-mb-1 " name="filterKedua[]" multiple
+                                multiselect-search="true" aria-label=".form-select-mb example" style=" padding: 7.5px;">
                                 <?php
                                             $query = mysqli_query($conn, "SELECT * FROM navbar_negara ORDER BY negara ASC");
                                             while($data = mysqli_fetch_array($query)){
@@ -235,8 +230,11 @@
                         <?php 
                         }
                         ?>
-
-                        <button class="button-tambah-filter" type="submit">Tambah Filter</button>
+                        <!-- bisa gunakan seperti di bawah ini, sebagai tanda kalau button sudah di klik -->
+                        <!-- <input type="hidden" name="filter" value="tambah"> -->
+                        <div class="button-container">
+                            <button class="button-tambah-filter" type="submit">Tambah Filter</button>
+                        </div>
                     </form>
                 </div>
             </aside>
@@ -244,19 +242,19 @@
                 <?php 
                 if($kodeGet == 1){
                     $query = mysqli_query($conn, "SELECT * FROM konten WHERE genre='$dataGet'");
-                    $filter = "GENRE";
+                    $jenisFilter = "GENRE";
                 }else if($kodeGet == 2){
                     $query = mysqli_query($conn, "SELECT * FROM konten WHERE negara='$dataGet'");
-                    $filter = "NEGARA";
+                    $jenisFilter = "NEGARA";
                 }else if($kodeGet == 3){
                     $query = mysqli_query($conn, "SELECT * FROM konten WHERE tahun=$dataGet");
-                    $filter = "TAHUN";
+                    $jenisFilter = "TAHUN";
                 }else{
                     $query = mysqli_query($conn, "SELECT * FROM konten WHERE CONCAT_WS(' ', judul, genre, negara, tahun) LIKE '%" .$cari. "%'");
                 }
                 
                 ?>
-                <h1>FILTER BERDASARKAN <?php echo $filter ?> : <?php echo $dataGet ?></h1>
+                <h1>FILTER BERDASARKAN <?php echo $jenisFilter ?> : <?php echo $dataGet ?></h1>
                 <div class="all-cards">
                     <!-- Ikhsan : Filtering tahap pertama -->
                     <?php

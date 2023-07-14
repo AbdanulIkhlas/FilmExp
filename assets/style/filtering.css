@@ -571,14 +571,31 @@ main article aside .container-filter {
     width: 100%;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
 .button-tambah-filter {
     padding: 5px;
     background-color: #596473;
     border: 2px solid white;
     border-radius: 5px;
     color: white;
-    box-shadow: 3px 3px 5px 1px black;
-    margin-top: 45px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    margin-top: 20px;
+}
+
+.button-tambah-filter:hover {
+    transform: translateY(-2px);
+    transition: transform 0.25s ease;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 7px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.button-tambah-filter:active {
+    transform: translateY(-1px);
+    transition: transform 0.1s ease;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 

@@ -1,5 +1,12 @@
 var style = document.createElement('style');
 style.setAttribute("id", "multiselect_dropdown_styles");
+/* 
+catatan :
+
+.multiselect-dropdown = kotak form nya
+.multiselect-dropdown span.optext = kotak option yg di pilih di dalam form 
+.multiselect-dropdown-list-wrapper = container list/option/dropdown
+*/
 style.innerHTML = `
 .multiselect-dropdown{
   display: inline-block;
@@ -21,8 +28,9 @@ style.innerHTML = `
   display:inline-block;
 }
 .multiselect-dropdown span.optext{
-  background-color:lightgray;
+  background-color:#18191a;
   padding: 3px 0.75em; 
+  margin-bottom: 5px;
 }
 .multiselect-dropdown span.optext .optdel {
   float: right;
@@ -48,7 +56,7 @@ style.innerHTML = `
   top:0;
   left: 0;
   right: 0;
-  background: #12582b;
+  background: #18191a;
 }
 .multiselect-dropdown-list-wrapper .multiselect-dropdown-search{
   margin-bottom:5px;
